@@ -1,4 +1,4 @@
-# pi_keyboard_emulator
+# Raspy Keyboard emulator
 raspberry pi as a keyboard emulator and a translator to automatically turn a script to the specific keyboard output
 
 Instructions based on:
