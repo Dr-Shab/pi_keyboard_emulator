@@ -10,8 +10,8 @@ def letter_to_key(word):
 
         elif letter in specials:
             f.write(f"    write_report(_.special_key[\"{letter}\"])\n")
+            f.write("    sleep(0.1)\n\n")  # when shift key is pressed sleep needs to be here so the terminal can react...
             f.write("    write_report(_.operation[\"release\"])\n")
-            f.write("    sleep(0.1)\n\n")
 
         elif letter.islower():
             f.write(f"    write_report(_.lowercase[\"{letter}\"])\n")
@@ -20,8 +20,8 @@ def letter_to_key(word):
 
         elif letter.isupper():
             f.write(f"    write_report(_.uppercase[\"{letter}\"])\n")
+            f.write("    sleep(0.1)\n\n")  # when shift key is pressed sleep needs to be here so the terminal can react...
             f.write("    write_report(_.operation[\"release\"])\n")
-            f.write("    sleep(0.1)\n\n")
 
     f.write("    write_report(_.special_key[\"space\"])\n")
     f.write("    write_report(_.operation[\"release\"])\n")
