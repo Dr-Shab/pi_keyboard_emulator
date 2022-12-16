@@ -30,7 +30,6 @@ def letter_to_key(word):
 
 
 with open('victim_script.py', 'x') as f:
-    f.write("#!/usr/bin/env python3\n\n")
     f.write("from time import sleep\nimport keys_ch_keyboard as _\nfrom os import name as OS\n\n")
     f.write("sleep(5)\n\nNULL_CHAR = chr(0)\n\n\n")
     f.write("def write_report(report):\n    with open('/dev/hidg0', 'rb+') as fd:\n         fd.write(report.encode())\n\n\n")
