@@ -15,3 +15,22 @@ Keyboard mapping achieved with the following information:
     echo "dtoverlay=dwc2" | sudo tee -a /boot/config.txt
     echo "dwc2" | sudo tee -a /etc/modules
     sudo echo "libcomposite" | sudo tee -a /etc/modules
+
+### 2. Configuring the Gadget
+Add the "usb_config" file to:
+`/usr/bin/`
+Make it executable:
+`sudo chmod +x /usr/bin/usb_config`
+The configuration is volatile, so it must run on each startup.
+Add the following line to the "/etc/rc.local" file, before he line containing *exit 0*
+`/usr/bin/usb_config`
+
+### 3. Commands to be executed
+1. Save your commands which the raspberry should execute in a *.txt* file.
+2. run the translator with the commands file as argument:
+`python translator.py commands.txt`
+This will generate the *cmd_to_strokes.py* file which will execute the keystrokes.
+
+### 4. Time to stroke
+Connect your Raspberry to a Computer via USB and run the *cmd_to_strokes.py* script.
+**_NOTE:_** At the moment only swiss keyboard mapping is available
