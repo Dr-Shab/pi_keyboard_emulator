@@ -33,4 +33,8 @@ This will generate the *cmd_to_strokes.py* file which will execute the keystroke
 
 ### 4. Time to stroke
 Connect your Raspberry to a Computer via USB and run the *cmd_to_strokes.py* script.  
+
+
+
+
 **_NOTE:_** At the moment only swiss keyboard mapping is available
