@@ -17,11 +17,11 @@ Keyboard mapping achieved with the following information:
     sudo echo "libcomposite" | sudo tee -a /etc/modules
 
 ### 2. Configuring the Gadget
-Add the "usb_config" file to:  
+- Add the "usb_config" file to:  
 `/usr/bin/`  
-Make it executable:  
+- Make it executable:  
 `sudo chmod +x /usr/bin/usb_config`  
-The configuration is volatile, so it must run on each startup.  
+- The configuration is volatile, so it must run on each startup.  
 Add the following line to the `/etc/rc.local` file, before he line containing *exit 0*  
 `/usr/bin/usb_config`
 
