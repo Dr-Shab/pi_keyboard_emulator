@@ -12,6 +12,6 @@ Keyboard mapping achieved with the following information:
 
 ## Preparation
 ### 1. Enabling Modules and Drivers
-    pi@raspberrypi:~ $ echo "dtoverlay=dwc2" | sudo tee -a /boot/config.txt
-    pi@raspberrypi:~ $ echo "dwc2" | sudo tee -a /etc/modules
-    pi@raspberrypi:~ $ sudo echo "libcomposite" | sudo tee -a /etc/modules
+    echo "dtoverlay=dwc2" | sudo tee -a /boot/config.txt
+    echo "dwc2" | sudo tee -a /etc/modules
+    sudo echo "libcomposite" | sudo tee -a /etc/modules
