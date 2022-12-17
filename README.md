@@ -26,7 +26,7 @@ Add the following line to the `/etc/rc.local` file, before he line containing *e
 `/usr/bin/usb_config`
 
 ### 3. Commands to be executed
-1. Save your commands which the raspberry should execute in a *.txt* file.
+1. Save your commands which the raspberry should execute in a *.txt* file.  
 **_NOTE:_** in the command file it is necessary to include an empty line after the last command otherwise the last command will be not executed! 
 3. run the translator with the commands file as argument:  
 `python translator.py commands.txt`  
