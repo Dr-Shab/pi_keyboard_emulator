@@ -31,10 +31,10 @@ def letter_to_key(word, file):
     return "lets buckling go"
 
 
-def translate(cmd_file):
+def translate(cmd_file, output_file="cmd_to_strokes.py"):
     lang = input("Which keyboard layout is used? ch or.. ")
     if len(lang) == 2 and lang.isalpha():
-        with open('cmd_to_strokes.py', 'x') as wf:
+        with open(f'{output_file}.py', 'x') as wf:
             wf.write(f"from time import sleep\nimport keys_{lang}_keyboard as _\nfrom os import name as OS\n\n")
             wf.write("sleep(5)\n\nNULL_CHAR = chr(0)\n\n\n")
             wf.write(
@@ -56,7 +56,7 @@ def translate(cmd_file):
                             wf.write("    sleep(0.5)\n\n")
                         else:
                             letter_to_key(word, wf)
-        print()
+        print(f'successfully generated the script {output_file}.py')
         exit(0)
     else:
         print("are you kidding me?!")
@@ -64,4 +64,4 @@ def translate(cmd_file):
 
 
 if __name__ == "__main__":
-    translate(str(sys.argv[1]))
+    translate(str(sys.argv[1]), str(sys.argv[2]))
