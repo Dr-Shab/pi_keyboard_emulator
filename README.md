@@ -17,17 +17,18 @@ Keyboard mapping achieved with the following information:
     sudo echo "libcomposite" | sudo tee -a /etc/modules
 
 ### 2. Configuring the Gadget
-Add the "usb_config" file to:  
+1. Add the "usb_config" file to:  
 `/usr/bin/`  
-Make it executable:  
+2. Make it executable:  
 `sudo chmod +x /usr/bin/usb_config`  
-The configuration is volatile, so it must run on each startup.  
+3. The configuration is volatile, so it must run on each startup.  
 Add the following line to the `/etc/rc.local` file, before he line containing *exit 0*  
 `/usr/bin/usb_config`
 
 ### 3. Commands to be executed
 1. Save your commands which the raspberry should execute in a *.txt* file.  
-2. run the translator with the commands file as argument:  
+**_NOTE:_** It is necessary to include an empty line after the last command otherwise the last command will be not executed! 
+3. run the translator with the commands file as argument:  
 `python translator.py commands.txt`  
 This will generate the *cmd_to_strokes.py* file which will execute the keystrokes.  
 
